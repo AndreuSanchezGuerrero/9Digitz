@@ -1,0 +1,188 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Mail, Phone, Users, Briefcase } from 'lucide-react';
+import { WhiteToBlueGradient } from '../BackgroundGradients';
+import { TeamSectionProps } from './types';
+import { TEAM_CONSTANTS, TEAM_MEMBERS } from './constants';
+
+const TeamSection: React.FC<TeamSectionProps> = () => {
+  // Organize team members by level for the org chart
+  const ceo = TEAM_MEMBERS.find(member => member.level === 1);
+  const directors = TEAM_MEMBERS.filter(member => member.level === 2);
+  const managers = TEAM_MEMBERS.filter(member => member.level === 3);
+  const teamMembers = TEAM_MEMBERS.filter(member => member.level === 4);
+
+  const TeamCard = ({ member, index, isConnected = false }: { member: any, index: number, isConnected?: boolean }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileHover={{ y: -5, scale: 1.02 }}
+      className={`bg-white/80 backdrop-blur-xl border border-slate-200 rounded-3xl p-6 text-center relative ${isConnected ? 'border-blue-300' : ''
+        }`}
+    >
+      {/* Connection line indicator */}
+      {isConnected && (
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-0.5 h-4 bg-blue-300" />
+      )}
+
+      <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-200">
+        <img
+          src={member.avatar}
+          alt={member.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <h3 className="text-xl font-semibold text-slate-900 mb-1">
+        {member.name}
+      </h3>
+
+      <p className="text-blue-600 font-medium mb-2">
+        {member.position}
+      </p>
+
+      <p className="text-slate-600 text-sm mb-4">
+        {member.department}
+      </p>
+
+      <div className="flex items-center justify-center space-x-3 text-slate-500">
+        <motion.a
+          href={`mailto:${member.email}`}
+          whileHover={{ scale: 1.1 }}
+          className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center hover:bg-blue-100 hover:text-blue-600 transition-colors"
+        >
+          <Mail size={16} />
+        </motion.a>
+        {member.phone && (
+          <motion.a
+            href={`tel:${member.phone}`}
+            whileHover={{ scale: 1.1 }}
+            className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center hover:bg-blue-100 hover:text-blue-600 transition-colors"
+          >
+            <Phone size={16} />
+          </motion.a>
+        )}
+      </div>
+    </motion.div>
+  );
+
+  return (
+    <WhiteToBlueGradient>
+      <section id="team" className="py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl md:text-6xl font-light text-slate-900 mb-6">
+              {TEAM_CONSTANTS.TITLE.MAIN}{' '}
+              <span className="text-blue-400 font-medium">{TEAM_CONSTANTS.TITLE.HIGHLIGHT}</span>
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              {TEAM_CONSTANTS.SUBTITLE}
+            </p>
+          </motion.div>
+
+          {/* Team Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+          >
+          </motion.div>
+
+          {/* Organizational Chart */}
+          <div className="space-y-12">
+            {/* CEO Level */}
+            {ceo && (
+              <div className="flex justify-center">
+                <div className="w-80">
+                  <TeamCard member={ceo} index={0} />
+                </div>
+              </div>
+            )}
+
+            {/* Connection line from CEO to Directors */}
+            <div className="flex justify-center">
+              <div className="w-0.5 h-8 bg-blue-300" />
+            </div>
+
+            {/* Directors Level */}
+            <div className="flex justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
+                {directors.map((director, index) => (
+                  <TeamCard key={director.id} member={director} index={index + 1} isConnected />
+                ))}
+              </div>
+            </div>
+
+            {/* Connection lines from Directors to Managers */}
+            <div className="flex justify-center">
+              <div className="w-0.5 h-8 bg-blue-300" />
+            </div>
+
+            {/* Managers Level */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {managers.map((manager, index) => (
+                <TeamCard key={manager.id} member={manager} index={index + 3} isConnected />
+              ))}
+            </div>
+
+            {/* Connection line from Managers to Team Members */}
+            {teamMembers.length > 0 && (
+              <>
+                <div className="flex justify-center">
+                  <div className="w-0.5 h-8 bg-blue-300" />
+                </div>
+
+                {/* Team Members Level */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                  {teamMembers.map((member, index) => (
+                    <TeamCard key={member.id} member={member} index={index + 6} isConnected />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+
+          {/* Call to Action */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-center mt-16"
+          >
+            <div className="bg-white/80 backdrop-blur-xl border border-slate-200 rounded-3xl p-8 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center space-x-3 mb-4">
+                <Users className="text-blue-400" size={32} />
+                <h3 className="text-2xl font-semibold text-slate-900">
+                  ¿Quieres formar parte del equipo?
+                </h3>
+              </div>
+              <p className="text-slate-600 mb-6">
+                Estamos siempre buscando talento excepcional para unirse a nuestro equipo de profesionales.
+              </p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-white px-8 py-4 rounded-full text-lg font-medium transition-colors flex items-center space-x-2 mx-auto"
+                style={{ backgroundColor: '#0076e3' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0076e3'}
+              >
+                <Briefcase size={20} />
+                <span>Ver oportunidades</span>
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </WhiteToBlueGradient>
+  );
+};
+
+export default TeamSection;

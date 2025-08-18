@@ -1,0 +1,179 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Smartphone } from 'lucide-react';
+import { WhiteToBlueGradient } from '../BackgroundGradients';
+import { CallToActionProps } from './types';
+import { CTA_CONSTANTS } from './constants';
+
+const CallToAction: React.FC<CallToActionProps> = () => {
+  return (
+    <WhiteToBlueGradient>
+      <section className="py-32 relative overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0">
+        <motion.div
+          animate={{
+            background: [
+              "radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)"
+            ]
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          className="absolute inset-0"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl md:text-7xl font-light text-slate-900 mb-6 leading-tight">
+            {CTA_CONSTANTS.TITLE.MAIN}{' '}
+            <span className="text-blue-400 font-medium">{CTA_CONSTANTS.TITLE.HIGHLIGHT}</span>{' '}
+            {CTA_CONSTANTS.TITLE.SUFFIX}
+          </h2>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            {CTA_CONSTANTS.SUBTITLE}
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Side - App Download */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <div className="flex flex-col sm:flex-row gap-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center space-x-3 bg-white/80 backdrop-blur-xl border border-slate-200 text-slate-900 px-6 py-4 rounded-2xl hover:bg-white transition-all duration-300"
+              >
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
+                  💼
+                </div>
+                <div className="text-left">
+                  <div className="text-xs text-slate-400">Consulta</div>
+                  <div className="font-semibold">{CTA_CONSTANTS.BUTTONS.CONSULTATION}</div>
+                </div>
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center space-x-3 bg-white/80 backdrop-blur-xl border border-slate-200 text-slate-900 px-6 py-4 rounded-2xl hover:bg-white transition-all duration-300"
+              >
+                <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
+                  📞
+                </div>
+                <div className="text-left">
+                  <div className="text-xs text-slate-400">{CTA_CONSTANTS.BUTTONS.CALL}</div>
+                  <div className="font-semibold">{CTA_CONSTANTS.CONTACT.PHONE}</div>
+                </div>
+              </motion.button>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white/80 backdrop-blur-xl border border-slate-200 rounded-3xl p-8"
+            >
+              <h3 className="text-2xl font-semibold text-slate-900 mb-4">
+                ¿Por qué elegir 9DIGITZ?
+              </h3>
+              <div className="space-y-4">
+                {CTA_CONSTANTS.FEATURES.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-center space-x-3"
+                  >
+                    <div className="w-2 h-2 bg-blue-400 rounded-full" />
+                    <span className="text-slate-700">{feature}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Side - QR Code and Phone */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center"
+          >
+            <motion.div
+              whileHover={{ scale: 1.05, rotate: 2 }}
+              className="inline-block bg-white/80 backdrop-blur-xl border border-slate-200 p-8 rounded-3xl mb-8 shadow-2xl"
+            >
+              <div className="w-48 h-48 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center">
+                <img
+                  src="/images/logos/9z-white.png"
+                  alt="9DIGITZ Logo"
+                  className="w-60 h-60 object-contain"
+                />
+              </div>
+            </motion.div>
+
+            <div className="text-slate-900 mb-4">
+              <div className="text-lg font-semibold mb-2">
+                {CTA_CONSTANTS.CONTACT.READY_TITLE}
+              </div>
+              <div className="text-slate-600">
+                {CTA_CONSTANTS.CONTACT.READY_SUBTITLE}
+              </div>
+            </div>
+
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-block"
+            >
+              <Smartphone className="text-blue-400" size={48} />
+            </motion.div>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center mt-16"
+        >
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+           onClick={() => {
+             const contactSection = document.getElementById('contact');
+             contactSection?.scrollIntoView({ behavior: 'smooth' });
+           }}
+            className="text-white px-12 py-6 rounded-full text-xl font-semibold transition-colors inline-flex items-center space-x-3"
+            style={{ backgroundColor: '#0076e3' }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0076e3'}
+          >
+            <span>{CTA_CONSTANTS.BUTTONS.MAIN_CTA}</span>
+          </motion.button>
+          
+          <div className="mt-6 text-slate-600">
+            {CTA_CONSTANTS.FOOTER_TEXT}
+          </div>
+        </motion.div>
+      </div>
+      </section>
+    </WhiteToBlueGradient>
+  );
+};
+
+export default CallToAction;

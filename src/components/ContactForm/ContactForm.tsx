@@ -1,0 +1,311 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Send, User, Mail, Phone, CheckCircle, AlertCircle } from 'lucide-react';
+import { BlueToWhiteGradient } from '../BackgroundGradients';
+import { ContactFormProps, FormData } from './types';
+import { CONTACT_CONSTANTS, WHY_CHOOSE_US, DIRECT_CONTACT_INFO, SERVICES_OPTIONS } from './constants';
+
+const ContactForm: React.FC<ContactFormProps> = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simular envío del formulario
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+      
+      // Reset status after 3 seconds
+      setTimeout(() => setSubmitStatus('idle'), 3000);
+    }, 2000);
+  };
+
+  return (
+    <BlueToWhiteGradient>
+      <section id="contact" className="py-32 relative overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0">
+        <motion.div
+          animate={{
+            background: [
+              "radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 70% 60%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 40% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)"
+            ]
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute inset-0"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl md:text-6xl font-light text-white mb-6">
+            {CONTACT_CONSTANTS.TITLE.MAIN}{' '}
+            <span className="text-blue-400 font-medium">{CONTACT_CONSTANTS.TITLE.HIGHLIGHT}</span>
+          </h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            {CONTACT_CONSTANTS.SUBTITLE}
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          {/* Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8">
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                {CONTACT_CONSTANTS.WHY_CHOOSE_TITLE}
+              </h3>
+              <div className="space-y-4">
+                {WHY_CHOOSE_US.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-center space-x-3"
+                  >
+                    <div className="text-2xl">{item.icon}</div>
+                    <span className="text-slate-300">{item.text}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8">
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                {CONTACT_CONSTANTS.DIRECT_CONTACT_TITLE}
+              </h3>
+              <div className="space-y-4">
+                {DIRECT_CONTACT_INFO.map((contact, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <contact.icon className="text-blue-400" size={20} />
+                    <span className="text-slate-300">{contact.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8">
+              <div className="space-y-6">
+                {/* Name Field */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  <label className="block text-white font-medium mb-2">
+                    {CONTACT_CONSTANTS.FORM_LABELS.NAME}
+                  </label>
+                  <div className="relative">
+                    <User className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full bg-slate-700/50 border border-slate-600 rounded-2xl pl-12 pr-4 py-4 text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 transition-colors"
+                      placeholder={CONTACT_CONSTANTS.PLACEHOLDERS.NAME}
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Email Field */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <label className="block text-white font-medium mb-2">
+                    {CONTACT_CONSTANTS.FORM_LABELS.EMAIL}
+                  </label>
+                  <div className="relative">
+                    <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full bg-slate-700/50 border border-slate-600 rounded-2xl pl-12 pr-4 py-4 text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 transition-colors"
+                      placeholder={CONTACT_CONSTANTS.PLACEHOLDERS.EMAIL}
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Phone Field */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                  <label className="block text-white font-medium mb-2">
+                    {CONTACT_CONSTANTS.FORM_LABELS.PHONE}
+                  </label>
+                  <div className="relative">
+                    <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full bg-slate-700/50 border border-slate-600 rounded-2xl pl-12 pr-4 py-4 text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 transition-colors"
+                      placeholder={CONTACT_CONSTANTS.PLACEHOLDERS.PHONE}
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Service Field */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                  <label className="block text-white font-medium mb-2">
+                    {CONTACT_CONSTANTS.FORM_LABELS.SERVICE}
+                  </label>
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full bg-slate-700/50 border border-slate-600 rounded-2xl px-4 py-4 text-white focus:outline-none focus:border-blue-400 transition-colors"
+                  >
+                    <option value="">{CONTACT_CONSTANTS.PLACEHOLDERS.SERVICE}</option>
+                    {SERVICES_OPTIONS.map((service) => (
+                      <option key={service} value={service}>
+                        {service}
+                      </option>
+                    ))}
+                  </select>
+                </motion.div>
+
+                {/* Message Field */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                >
+                  <label className="block text-white font-medium mb-2">
+                    {CONTACT_CONSTANTS.FORM_LABELS.MESSAGE}
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={4}
+                    className="w-full bg-slate-700/50 border border-slate-600 rounded-2xl px-4 py-4 text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 transition-colors resize-none"
+                    placeholder={CONTACT_CONSTANTS.PLACEHOLDERS.MESSAGE}
+                  />
+                </motion.div>
+
+                {/* Submit Button */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                >
+                  <motion.button
+                    type="submit"
+                    disabled={isSubmitting}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full text-white py-4 rounded-2xl font-semibold transition-colors flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    style={{ backgroundColor: isSubmitting ? '#005bb5' : '#0076e3' }}
+                    onMouseEnter={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = '#005bb5')}
+                    onMouseLeave={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = '#0076e3')}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <motion.div
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                          className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                        />
+                        <span>Enviando...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send size={20} />
+                        <span>{CONTACT_CONSTANTS.BUTTON_TEXT}</span>
+                      </>
+                    )}
+                  </motion.button>
+                </motion.div>
+
+                {/* Success/Error Messages */}
+                {submitStatus === 'success' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center space-x-2 text-green-300 bg-green-400/10 border border-green-400/30 rounded-2xl p-4"
+                  >
+                    <CheckCircle size={20} />
+                    <span>{CONTACT_CONSTANTS.SUCCESS_MESSAGE}</span>
+                  </motion.div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center space-x-2 text-red-300 bg-red-400/10 border border-red-400/30 rounded-2xl p-4"
+                  >
+                    <AlertCircle size={20} />
+                    <span>{CONTACT_CONSTANTS.ERROR_MESSAGE}</span>
+                  </motion.div>
+                )}
+              </div>
+            </form>
+          </motion.div>
+        </div>
+      </div>
+      </section>
+    </BlueToWhiteGradient>
+  );
+};
+
+export default ContactForm;
