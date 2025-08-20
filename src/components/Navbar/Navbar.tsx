@@ -1,11 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { scrollToSection } from '../../utils/scrollUtils';
 import { NavbarProps } from './types';
 import { NAVBAR_CONSTANTS } from './constants';
 
 const Navbar: React.FC<NavbarProps> = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+
+  const handleNavClick = (href: string) => {
+    const sectionId = href.replace('#', '');
+    scrollToSection(sectionId);
+    setIsOpen(false);
+  };
 
   return (
     <motion.nav
@@ -31,13 +38,13 @@ const Navbar: React.FC<NavbarProps> = () => {
           {/* Navigation Menu - Center */}
           <div className="hidden md:flex items-center space-x-8 flex-1 justify-center">
             {NAVBAR_CONSTANTS.NAV_ITEMS.map((item) => (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
+                onClick={() => handleNavClick(item.href)}
                 className="text-slate-700 hover:text-blue-600 transition-colors font-medium"
               >
                 {item.label}
-              </a>
+              </button>
             ))}
           </div>
 
@@ -47,10 +54,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                contactSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => scrollToSection('contact')}
               className="hidden md:block text-white px-6 py-2 rounded-full font-medium transition-colors"
               style={{ backgroundColor: '#0076e3' }}
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#005bb5')}
@@ -95,13 +99,13 @@ const Navbar: React.FC<NavbarProps> = () => {
           >
             <div className="flex flex-col space-y-4">
               {NAVBAR_CONSTANTS.NAV_ITEMS.map((item) => (
-                <a
+                <button
                   key={item.label}
-                  href={item.href}
-                  className="text-slate-700 hover:text-blue-600 transition-colors"
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-slate-700 hover:text-blue-600 transition-colors text-left"
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t border-slate-200/50">
                 <button
@@ -109,11 +113,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                   style={{ backgroundColor: '#0076e3' }}
                   onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#005bb5')}
                   onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#0076e3')}
-                  onClick={() => {
-                    const contactSection = document.getElementById('contact');
-                    contactSection?.scrollIntoView({ behavior: 'smooth' });
-                    setIsOpen(false);
-                  }}
+                  onClick={() => scrollToSection('contact')}
                 >
                   {NAVBAR_CONSTANTS.BUTTONS.CTA}
                 </button>

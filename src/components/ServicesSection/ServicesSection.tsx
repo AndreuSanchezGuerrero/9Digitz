@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BlueToWhiteGradient } from '../BackgroundGradients';
 import ServiceModal from '../ServiceModal';
+import { scrollToSection } from '../../utils/scrollUtils';
 import { ServicesSectionProps, Service } from './types';
 import { SERVICES_CONSTANTS, SERVICES } from './constants';
 
@@ -83,12 +84,9 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-center mt-16"
-             onClick={() => {
-               const contactSection = document.getElementById('contact');
-               contactSection?.scrollIntoView({ behavior: 'smooth' });
-             }}
           >
             <button 
+              onClick={() => scrollToSection('contact')}
               className="text-white px-8 py-4 rounded-full text-lg font-medium transition-colors"
               style={{ backgroundColor: '#0076e3' }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Clock, Users, Lightbulb } from 'lucide-react';
 import { BlueToWhiteGradient } from '../BackgroundGradients';
+import { scrollToSection } from '../../utils/scrollUtils';
 import { ProcessJourneyProps } from './types';
 import { PROCESS_CONSTANTS, PROCESS_STEPS } from './constants';
 
@@ -96,10 +97,7 @@ const ProcessJourney: React.FC<ProcessJourneyProps> = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-             onClick={() => {
-               const contactSection = document.getElementById('contact');
-               contactSection?.scrollIntoView({ behavior: 'smooth' });
-             }}
+              onClick={() => scrollToSection('contact')}
               className="text-white px-8 py-4 rounded-full text-lg font-medium transition-colors flex items-center space-x-2 mx-auto"
               style={{ backgroundColor: '#0076e3' }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Smartphone } from 'lucide-react';
 import { WhiteToBlueGradient } from '../BackgroundGradients';
+import { scrollToSection } from '../../utils/scrollUtils';
 import { CallToActionProps } from './types';
 import { CTA_CONSTANTS } from './constants';
 
@@ -54,6 +55,7 @@ const CallToAction: React.FC<CallToActionProps> = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => scrollToSection('contact')}
                 className="flex items-center justify-center space-x-3 bg-white/80 backdrop-blur-xl border border-slate-200 text-slate-900 px-6 py-4 rounded-2xl hover:bg-white transition-all duration-300"
               >
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
@@ -154,10 +156,7 @@ const CallToAction: React.FC<CallToActionProps> = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-           onClick={() => {
-             const contactSection = document.getElementById('contact');
-             contactSection?.scrollIntoView({ behavior: 'smooth' });
-           }}
+            onClick={() => scrollToSection('contact')}
             className="text-white px-12 py-6 rounded-full text-xl font-semibold transition-colors inline-flex items-center space-x-3"
             style={{ backgroundColor: '#0076e3' }}
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}

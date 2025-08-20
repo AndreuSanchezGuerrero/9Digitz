@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { scrollToSection } from '../../utils/scrollUtils';
 import { HeroProps } from './types';
 import { HERO_CONSTANTS } from './constants';
 
@@ -64,10 +65,7 @@ const Hero: React.FC<HeroProps> = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-           onClick={() => {
-             const contactSection = document.getElementById('contact');
-             contactSection?.scrollIntoView({ behavior: 'smooth' });
-           }}
+            onClick={() => scrollToSection('contact')}
             className="text-white px-8 py-4 rounded-full text-lg font-medium transition-colors flex items-center space-x-2"
             style={{ backgroundColor: '#0076e3' }}
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
@@ -79,10 +77,7 @@ const Hero: React.FC<HeroProps> = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => {
-              const servicesSection = document.getElementById('services');
-              servicesSection?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={() => scrollToSection('services')}
             className="border border-slate-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-slate-800 transition-colors"
           >
             {HERO_CONSTANTS.BUTTONS.SECONDARY}
@@ -104,10 +99,7 @@ const Hero: React.FC<HeroProps> = () => {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
-        onClick={() => {
-          const nextSection = document.getElementById('services');
-          nextSection?.scrollIntoView({ behavior: 'smooth' });
-        }}
+        onClick={() => scrollToSection('services')}
       >
         <div className="w-6 h-10 border-2 border-slate-600 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-slate-400 rounded-full mt-2"></div>
