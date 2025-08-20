@@ -21,11 +21,11 @@ const Navbar: React.FC<NavbarProps> = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-white via-blue-100 to-blue-200 backdrop-blur-xl border-b border-blue-200/50 shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-32 md:h-40">
+        <div className="flex items-center justify-between h-24 md:h-22">
           {/* Logo principal - Left side */}
           <div className="flex items-center">
             <img
-              src="/images/logos/Logotip-transparent.png"
+              src="./images/logos/Logotip-transparent.png"
               alt="9DIGITZ"
               className="h-28 md:h-36 object-contain select-none"
               draggable={false}
@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = () => {
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className="text-slate-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-slate-700 hover:text-blue-600 transition-colors font-medium text-sm"
               >
                 {item.label}
               </button>
@@ -55,7 +55,7 @@ const Navbar: React.FC<NavbarProps> = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('contact')}
-              className="hidden md:block text-white px-6 py-2 rounded-full font-medium transition-colors"
+              className="hidden md:block text-white px-4 py-2 rounded-full font-medium transition-colors text-sm"
               style={{ backgroundColor: '#0076e3' }}
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#005bb5')}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#0076e3')}
@@ -65,17 +65,17 @@ const Navbar: React.FC<NavbarProps> = () => {
 
             {/* Icono 9Z */}
             <motion.img
-              src="/images/logos/9z-trans.png"
+              src="./images/logos/9z-trans.png"
               alt="9DIGITZ Logo"
               className="hidden md:block h-20 w-auto md:h-24 select-none"
               draggable={false}
               loading="eager"
               decoding="async"
-              initial={{ scale: 1.3 }}
-              animate={{ scale: 1.3 }}
+              initial={{ scale: 1.1 }}
+              animate={{ scale: 1.1 }}
               style={{
                 willChange: 'transform',
-                filter: 'drop-shadow(0 10px 18px rgba(0,118,227,0.25)) drop-shadow(0 4px 8px rgba(0,118,227,0.15))'
+                filter: 'drop-shadow(0 6px 12px rgba(0,118,227,0.25)) drop-shadow(0 2px 4px rgba(0,118,227,0.15))'
               }}
             />
           </div>

@@ -7,7 +7,7 @@ import { HERO_CONSTANTS } from './constants';
 
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-40">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
@@ -35,12 +35,12 @@ const Hero: React.FC<HeroProps> = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-6 mt-4 md:mt-0">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 mt-4 md:mt-0">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-8xl font-light text-white mb-6 md:mb-8 leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 md:mb-6 leading-tight"
         >
           {HERO_CONSTANTS.TITLE.MAIN}{' '}
           <span className="text-blue-400 font-medium">{HERO_CONSTANTS.TITLE.HIGHLIGHT}</span>{' '}
@@ -51,7 +51,7 @@ const Hero: React.FC<HeroProps> = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-2xl text-slate-300 mb-8 md:mb-12 max-w-3xl mx-auto font-light leading-relaxed"
+          className="text-lg md:text-xl lg:text-2xl text-slate-300 mb-6 md:mb-8 max-w-3xl mx-auto font-light leading-relaxed"
         >
           {HERO_CONSTANTS.SUBTITLE}
         </motion.p>
@@ -66,19 +66,19 @@ const Hero: React.FC<HeroProps> = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('contact')}
-            className="text-white px-8 py-4 rounded-full text-lg font-medium transition-colors flex items-center space-x-2"
+            className="text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-medium transition-colors flex items-center space-x-2"
             style={{ backgroundColor: '#0076e3' }}
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0076e3'}
           >
             <span>{HERO_CONSTANTS.BUTTONS.PRIMARY}</span>
-            <ArrowRight size={20} />
+            <ArrowRight size={18} />
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('services')}
-            className="border border-slate-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-slate-800 transition-colors"
+            className="border border-slate-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-medium hover:bg-slate-800 transition-colors"
           >
             {HERO_CONSTANTS.BUTTONS.SECONDARY}
           </motion.button>
@@ -88,7 +88,7 @@ const Hero: React.FC<HeroProps> = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
-          className="mt-16 text-slate-400 text-sm"
+          className="mt-12 md:mt-16 text-slate-400 text-sm"
         >
           {HERO_CONSTANTS.FOOTER_TEXT}
         </motion.div>

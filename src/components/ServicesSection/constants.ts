@@ -11,7 +11,7 @@ export const SERVICES_CONSTANTS = {
 
 export const SERVICES: Service[] = [
   { 
-    icon: '/images/icons/serveis cloud_Mesa de trabajo 1.png',
+    icon: './images/icons/serveis cloud_Mesa de trabajo 1.png',
     name: 'Servidores Cloud', 
     description: 'Infraestructura escalable y segura',
     color: 'from-blue-500 to-blue-600',
@@ -36,7 +36,7 @@ export const SERVICES: Service[] = [
     }
   },
   { 
-    icon: '/images/icons/apps i webs_Mesa de trabajo 1.png',
+    icon: './images/icons/apps i webs_Mesa de trabajo 1.png',
     name: 'Apps & Webs', 
     description: 'Desarrollo a medida',
     color: 'from-emerald-500 to-emerald-600',
@@ -48,7 +48,7 @@ export const SERVICES: Service[] = [
     }
   },
   { 
-    icon: '/images/icons/operador internet_Mesa de trabajo 1.png',
+    icon: './images/icons/operador internet_Mesa de trabajo 1.png',
     name: 'IP Avanzada', 
     description: 'Soluciones de conectividad',
     color: 'from-purple-500 to-purple-600',
@@ -60,7 +60,7 @@ export const SERVICES: Service[] = [
     }
   },
   { 
-    icon: '/images/icons/ciberseguretat_Mesa de trabajo 1.png',
+    icon: './images/icons/ciberseguretat_Mesa de trabajo 1.png',
     name: 'Ciberseguridad', 
     description: 'Protección integral',
     color: 'from-red-500 to-red-600',
@@ -72,7 +72,7 @@ export const SERVICES: Service[] = [
     }
   },
   { 
-    icon: '/images/icons/centraletes VoIP_Mesa de trabajo 1.png',
+    icon: './images/icons/centraletes VoIP_Mesa de trabajo 1.png',
     name: 'Internet & Telefonía', 
     description: 'Comunicaciones empresariales',
     color: 'from-orange-500 to-orange-600',
@@ -84,7 +84,7 @@ export const SERVICES: Service[] = [
     }
   },
   { 
-    icon: '/images/icons/cartelleria digital_Mesa de trabajo 1.png',
+    icon: './images/icons/cartelleria digital_Mesa de trabajo 1.png',
     name: 'Cartellería Digital', 
     description: 'Señalización inteligente',
     color: 'from-cyan-500 to-cyan-600',
@@ -96,7 +96,7 @@ export const SERVICES: Service[] = [
     }
   },
   { 
-    icon: '/images/icons/pantalles interactives_Mesa de trabajo 1.png',
+    icon: './images/icons/pantalles interactives_Mesa de trabajo 1.png',
     name: 'Touch Screens', 
     description: 'Interfaces interactivas',
     color: 'from-pink-500 to-pink-600',
@@ -108,7 +108,7 @@ export const SERVICES: Service[] = [
     }
   },
   { 
-    icon: '/images/icons/contingut multimedia_Mesa de trabajo 1.png',
+    icon: './images/icons/contingut multimedia_Mesa de trabajo 1.png',
     name: 'Video & 3D', 
     description: 'Contenido audiovisual',
     color: 'from-indigo-500 to-indigo-600',
@@ -120,7 +120,7 @@ export const SERVICES: Service[] = [
     }
   },
   { 
-    icon: '/images/icons/marqueting_Mesa de trabajo 1.png',
+    icon: './images/icons/marqueting_Mesa de trabajo 1.png',
     name: 'Marketing Digital', 
     description: 'Estrategias online',
     color: 'from-yellow-500 to-yellow-600',
@@ -132,7 +132,7 @@ export const SERVICES: Service[] = [
     }
   },
   { 
-    icon: '/images/icons/partner microsoft 365_Mesa de trabajo 1.png',
+    icon: './images/icons/partner microsoft 365_Mesa de trabajo 1.png',
     name: 'Kit Digital', 
     description: 'Transformación completa',
     color: 'from-teal-500 to-teal-600',

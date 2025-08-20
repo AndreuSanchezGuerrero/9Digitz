@@ -33,7 +33,7 @@ const CallToAction: React.FC<CallToActionProps> = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-light text-slate-900 mb-6 leading-tight">
+          <h2 className="text-5xl md:text-6xl font-light mb-6">
             {CTA_CONSTANTS.TITLE.MAIN}{' '}
             <span className="text-blue-400 font-medium">{CTA_CONSTANTS.TITLE.HIGHLIGHT}</span>{' '}
             {CTA_CONSTANTS.TITLE.SUFFIX}
@@ -121,7 +121,7 @@ const CallToAction: React.FC<CallToActionProps> = () => {
             >
               <div className="w-48 h-48 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center">
                 <img
-                  src="/images/logos/9z-white.png"
+                  src="./images/logos/9z-white.png"
                   alt="9DIGITZ Logo"
                   className="w-60 h-60 object-contain"
                 />

@@ -1,4 +1,4 @@
-export const scrollToSection = (sectionId: string, offset: number = 160) => {
+export const scrollToSection = (sectionId: string, offset: number = 80) => {
     const element = document.getElementById(sectionId);
     if (element) {
         const elementPosition = element.getBoundingClientRect().top;

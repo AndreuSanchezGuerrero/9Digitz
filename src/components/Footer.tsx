@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Logo = () => (
   <img 
-    src="/images/logos/logo-blanc.png" 
+    src="./images/logos/logo-blanc.png" 
     alt="9DIGITZ Logo"
     className="h-16 w-auto object-contain"
   />
@@ -58,7 +58,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/images/logos/logo-blanc.png" 
+                src="./images/logos/logo-blanc.png" 
                 alt="9DIGITZ Logo"
                 className="h-48 w-auto object-contain"
               />

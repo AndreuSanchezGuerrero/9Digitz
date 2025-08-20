@@ -105,7 +105,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
         >
           <div className="flex items-start space-x-3">
             <img 
-              src="/images/logos/9z-trans.png" 
+              src="./images/logos/9z-trans.png" 
               alt="9DIGITZ"
               className="w-16 h-16 object-contain flex-shrink-0"
             />
