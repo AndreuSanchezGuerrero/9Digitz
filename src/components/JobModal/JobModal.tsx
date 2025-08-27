@@ -83,7 +83,7 @@ const JobModal: React.FC<JobModalProps> = ({ isOpen, onClose }) => {
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0076e3'}
                     onClick={() => {
-                      window.location.href = 'mailto:rrhh@9digitz.com?subject=Candidatura Espontánea&body=Hola, me gustaría formar parte del equipo de 9DIGITZ...';
+                      window.location.href = 'mailto:info@9digitz.com.com?subject=Candidatura Espontánea&body=Hola, me gustaría formar parte del equipo de 9DIGITZ...';
                     }}
                   >
                     <Mail size={18} />

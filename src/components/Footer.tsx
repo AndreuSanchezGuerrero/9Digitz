@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { scrollToSection } from '../utils/scrollUtils';
 
 const Logo = () => (
   <img 
@@ -9,18 +10,26 @@ const Logo = () => (
 );
 
 const Footer = () => {
+  const handleServiceClick = () => {
+    scrollToSection('services');
+  };
+
+  const handleTeamClick = () => {
+    scrollToSection('team');
+  };
+
   const footerLinks = {
     'Servicios': [
-      'Servidores Cloud',
-      'Apps & Webs',
-      'IP Avanzada',
-      'Ciberseguridad',
-      'Internet & Telefonía',
-      'Cartelería Digital',
-      'Touch Screens',
-      'Video & 3D',
+      'Desarrollo de Apps y Webs',
       'Marketing Digital',
-      'Kit Digital'
+      'Servidores Cloud',
+      'Ciberseguridad',
+      'Centralitas VoIP/SIP',
+      'Operador de Internet',
+      'Cartelería Digital',
+      'Pantallas Interactivas',
+      'Producción Audiovisual',
+      'Partner Microsoft 365'
     ],
     'Soluciones': [
       'Transformación Digital',
@@ -34,26 +43,23 @@ const Footer = () => {
       'Monitorización IT',
       'Optimización de Infraestructura'
     ],
-    'Sectores': [
-      'Retail & E-commerce',
-      'Salud & Medicina',
-      'Educación',
-      'Finanzas',
-      'Manufactura'
-    ],
+
     'Nuestro equipo': [
-      'JM',
-      'Ricard',
+      'Josep M',
+      'Riki',
       'Andreu',
+      'Marta',
+      'Robert',
       'Marc',
-      'Albert'
+      'Meritxell',
+      'Javi'
     ]
   };
 
   return (
     <footer style={{ backgroundColor: '#0076e3' }} className="border-t border-blue-600">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
@@ -70,19 +76,25 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Links */}
+          {/* Links - Each column takes equal space */}
           {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
+            <div key={category} className="lg:col-span-1">
               <h3 className="text-white font-semibold mb-4">{category}</h3>
               <ul className="space-y-3">
                 {links.map((link, index) => (
                   <li key={index}>
-                    <a
-                      href="#"
-                      className="text-blue-100 hover:text-white transition-colors text-sm"
+                    <button
+                      onClick={
+                        category === 'Servicios' 
+                          ? handleServiceClick 
+                          : category === 'Nuestro equipo' 
+                          ? handleTeamClick 
+                          : undefined
+                      }
+                      className="text-blue-100 hover:text-white transition-colors text-sm text-left cursor-pointer w-full"
                     >
                       {link}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>

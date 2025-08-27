@@ -11,7 +11,7 @@ export const TEAM_CONSTANTS = {
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: 1,
-    name: 'Josep Maria Puig',
+    name: 'Josep M',
     position: 'CEO - Founder',
     department: 'Dirección General',
     avatar: './images/team/jm.jpeg',
@@ -28,7 +28,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     id: 3,
-    name: 'Andreu Sánchez',
+    name: 'Andreu',
     position: 'Cap Informàtica i Programació',
     department: 'Desarrollo Tecnológico',
     avatar: './images/team/andreu.jpeg',

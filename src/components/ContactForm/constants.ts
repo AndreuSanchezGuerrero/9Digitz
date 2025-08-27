@@ -37,7 +37,7 @@ export const WHY_CHOOSE_US: ContactInfo[] = [
 
 export const DIRECT_CONTACT_INFO: DirectContact[] = [
   { icon: Phone, text: '+34 900 123 456' },
-  { icon: Mail, text: 'hola@9digitz.com' },
+  { icon: Mail, text: 'info@9digitz.com' },
   { icon: MessageSquare, text: 'Chat en vivo disponible' }
 ];
 

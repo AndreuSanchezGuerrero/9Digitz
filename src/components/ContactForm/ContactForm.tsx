@@ -104,7 +104,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
                       <img 
                         src={item.icon} 
                         alt=""
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain filter brightness-0 invert"
                       />
                     </div>
                     <span className="text-slate-300">{item.text}</span>
@@ -120,7 +120,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               <div className="space-y-4">
                 {DIRECT_CONTACT_INFO.map((contact, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <contact.icon className="text-blue-400" size={20} />
+                    <contact.icon className="text-white" size={20} />
                     <span className="text-slate-300">{contact.text}</span>
                   </div>
                 ))}
