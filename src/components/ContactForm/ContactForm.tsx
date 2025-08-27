@@ -100,7 +100,13 @@ const ContactForm: React.FC<ContactFormProps> = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
-                    <div className="text-2xl">{item.icon}</div>
+                    <div className="w-8 h-8 flex-shrink-0">
+                      <img 
+                        src={item.icon} 
+                        alt=""
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                     <span className="text-slate-300">{item.text}</span>
                   </motion.div>
                 ))}

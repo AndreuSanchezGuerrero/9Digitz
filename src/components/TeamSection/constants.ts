@@ -5,68 +5,79 @@ export const TEAM_CONSTANTS = {
     MAIN: 'Nuestro',
     HIGHLIGHT: 'equipo'
   },
-  SUBTITLE: 'Conoce a los profesionales que hacen posible la transformación digital de tu empresa.',
+  SUBTITLE: 'Un equipo de profesionales altamente cualificados comprometidos con la excelencia y la innovación tecnológica.'
 };
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: 1,
-    name: 'Josep Maria',
-    position: 'CEO & Fundador',
-    department: 'Dirección',
+    name: 'Josep Maria Puig',
+    position: 'CEO - Founder',
+    department: 'Dirección General',
     avatar: './images/team/jm.jpeg',
-    email: 'carlos@9digitz.com',
-    phone: '+34 900 123 456',
     level: 1
   },
   {
     id: 2,
-    name: 'Riki Porcel',
-    position: 'Director de Marketing, Audio y Video3D',
-    department: 'Marketing',
+    name: 'Riki',
+    position: 'Adjunt a Direcció',
+    department: 'Cap Marketing/Audiovisuals',
     avatar: './images/team/riki.jpeg',
-    email: 'ana@9digitz.com',
     level: 2,
     reportsTo: 1
   },
   {
     id: 3,
     name: 'Andreu Sánchez',
-    position: 'Director de tecnología',
-    department: 'Tecnología',
+    position: 'Cap Informàtica i Programació',
+    department: 'Desarrollo Tecnológico',
     avatar: './images/team/andreu.jpeg',
-    email: 'miguel@9digitz.com',
     level: 2,
     reportsTo: 1
   },
   {
     id: 4,
-    name: 'Laura Ruiz',
-    position: 'Jefa de Desarrollo',
-    department: 'Desarrollo',
-    avatar: './images/team/laura.jpg',
-    email: 'laura@9digitz.com',
+    name: 'Marta',
+    position: 'Administració i Atenció al Client',
+    department: 'Administración',
+    avatar: './images/team/jm.jpeg',
     level: 3,
     reportsTo: 2
   },
   {
     id: 5,
-    name: 'Roberto Silva',
-    position: 'Especialista en Ciberseguridad',
-    department: 'Seguridad',
-    avatar: './images/team/roberto.jpg',
-    email: 'roberto@9digitz.com',
+    name: 'Robert',
+    position: 'Marketing i Xarxes Socials',
+    department: 'Marketing Digital',
+    avatar: './images/team/jm.jpeg',
     level: 3,
     reportsTo: 2
   },
   {
     id: 6,
-    name: 'Carmen López',
-    position: 'Especialista en Marketing',
-    department: 'Marketing',
-    avatar: './images/team/carmen.jpg',
-    email: 'carmen@9digitz.com',
+    name: 'Marc',
+    position: 'Integracions API i Desenvolupament',
+    department: 'Desarrollo',
+    avatar: './images/team/jm.jpeg',
     level: 3,
     reportsTo: 3
+  },
+  {
+    id: 7,
+    name: 'Meritxell',
+    position: 'Comptabilitat',
+    department: 'Administración',
+    avatar: './images/team/jm.jpeg',
+    level: 4,
+    reportsTo: 4
+  },
+  {
+    id: 8,
+    name: 'Javi',
+    position: 'Enginyer Telecomunicacions',
+    department: 'Seguretat Informàtica',
+    avatar: './images/team/jm.jpeg',
+    level: 4,
+    reportsTo: 6
   }
 ];

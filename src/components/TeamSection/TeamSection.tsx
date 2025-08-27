@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Users, Briefcase } from 'lucide-react';
+import { Users, Briefcase } from 'lucide-react';
 import { WhiteToBlueGradient } from '../BackgroundGradients';
+import JobModal from '../JobModal';
 import { TeamSectionProps } from './types';
 import { TEAM_CONSTANTS, TEAM_MEMBERS } from './constants';
 
 const TeamSection: React.FC<TeamSectionProps> = () => {
+  const [isJobModalOpen, setIsJobModalOpen] = React.useState(false);
+
   // Organize team members by level for the org chart
   const ceo = TEAM_MEMBERS.find(member => member.level === 1);
   const directors = TEAM_MEMBERS.filter(member => member.level === 2);
@@ -26,7 +29,7 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-0.5 h-4 bg-blue-300" />
       )}
 
-      <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-200">
+      <div className="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-200">
         <img
           src={member.avatar}
           alt={member.name}
@@ -45,25 +48,6 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
       <p className="text-slate-600 text-sm mb-4">
         {member.department}
       </p>
-
-      <div className="flex items-center justify-center space-x-3 text-slate-500">
-        <motion.a
-          href={`mailto:${member.email}`}
-          whileHover={{ scale: 1.1 }}
-          className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center hover:bg-blue-100 hover:text-blue-600 transition-colors"
-        >
-          <Mail size={16} />
-        </motion.a>
-        {member.phone && (
-          <motion.a
-            href={`tel:${member.phone}`}
-            whileHover={{ scale: 1.1 }}
-            className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center hover:bg-blue-100 hover:text-blue-600 transition-colors"
-          >
-            <Phone size={16} />
-          </motion.a>
-        )}
-      </div>
     </motion.div>
   );
 
@@ -140,10 +124,12 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
                 </div>
 
                 {/* Team Members Level */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="flex justify-center">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl">
                   {teamMembers.map((member, index) => (
                     <TeamCard key={member.id} member={member} index={index + 6} isConnected />
                   ))}
+                  </div>
                 </div>
               </>
             )}
@@ -169,6 +155,7 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => setIsJobModalOpen(true)}
                 className="text-white px-8 py-4 rounded-full text-lg font-medium transition-colors flex items-center space-x-2 mx-auto"
                 style={{ backgroundColor: '#0076e3' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
@@ -180,6 +167,11 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
             </div>
           </motion.div>
         </div>
+
+        <JobModal
+          isOpen={isJobModalOpen}
+          onClose={() => setIsJobModalOpen(false)}
+        />
       </section>
     </WhiteToBlueGradient>
   );

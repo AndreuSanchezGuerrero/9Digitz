@@ -46,7 +46,13 @@ const ProcessJourney: React.FC<ProcessJourneyProps> = () => {
                   whileHover={{ y: -10, scale: 1.02 }}
                   className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 text-center hover:bg-slate-800/70 transition-all duration-300"
                 >
-                  <div className="text-4xl mb-4">{step.icon}</div>
+                  <div className="flex justify-center mb-4 h-20 items-center">
+                    <img 
+                      src={step.icon} 
+                      alt={step.title}
+                      className="max-w-16 max-h-16 w-auto h-auto object-contain"
+                    />
+                  </div>
                   
                   <div className="flex items-center justify-center space-x-2 mb-3">
                     <Clock className="text-slate-400" size={16} />

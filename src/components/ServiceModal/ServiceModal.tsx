@@ -1,10 +1,18 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle, ArrowRight } from 'lucide-react';
+import { scrollToSection } from '../../utils/scrollUtils';
 import { ServiceModalProps } from './types';
 
 const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, service }) => {
   if (!service) return null;
+
+  const handleContactClick = () => {
+    onClose();
+    setTimeout(() => {
+      scrollToSection('contact');
+    }, 300); // Wait for modal close animation
+  };
 
   return (
     <AnimatePresence>
@@ -24,10 +32,10 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, service })
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl"
+              className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl flex flex-col"
             >
               {/* Header */}
-              <div className="relative">
+              <div className="relative flex-shrink-0">
                 <img 
                   src={service.details.image}
                   alt={service.name}
@@ -66,7 +74,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, service })
               </div>
 
               {/* Content */}
-              <div className="p-8 max-h-96 overflow-y-auto">
+              <div className="p-8 flex-1 overflow-y-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {/* Description */}
                   <div>
@@ -80,6 +88,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, service })
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
+                      onClick={handleContactClick}
                       className="text-white px-6 py-3 rounded-full font-medium transition-colors flex items-center space-x-2"
                       style={{ backgroundColor: '#0076e3' }}
                       onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}

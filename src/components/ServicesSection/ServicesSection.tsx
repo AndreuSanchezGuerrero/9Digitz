@@ -48,11 +48,12 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
                 onClick={() => handleServiceClick(service)}
-                className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 hover:bg-slate-800/70 transition-all duration-300 text-center cursor-pointer"
+                className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 hover:bg-slate-800/70 transition-all duration-300 text-center cursor-pointer flex flex-col h-full"
               >
+                <div className="flex justify-center mb-4">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-4`}
+                  className={`flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl`}
                 >
                   <img 
                     src={service.icon} 
@@ -60,12 +61,13 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
                     className="w-8 h-8 object-contain filter brightness-0 invert"
                   />
                 </motion.div>
+                </div>
 
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {service.name}
                 </h3>
                 
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-slate-400 text-sm leading-relaxed flex-grow">
                   {service.description}
                 </p>
 
@@ -73,7 +75,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
                   initial={{ width: 0 }}
                   whileInView={{ width: "100%" }}
                   transition={{ duration: 0.8, delay: index * 0.05 + 0.3 }}
-                  className={`mt-4 h-0.5 bg-gradient-to-r ${service.color} rounded-full`}
+                  className={`mt-4 h-0.5 bg-gradient-to-r ${service.color} rounded-full flex-shrink-0`}
                 />
               </motion.div>
             ))}

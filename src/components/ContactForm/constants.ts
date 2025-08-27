@@ -29,10 +29,10 @@ export const CONTACT_CONSTANTS = {
 };
 
 export const WHY_CHOOSE_US: ContactInfo[] = [
-  { icon: '🚀', text: 'Respuesta en menos de 24 horas' },
-  { icon: '💡', text: 'Consulta inicial completamente gratuita' },
-  { icon: '🎯', text: 'Soluciones personalizadas para tu negocio' },
-  { icon: '🔒', text: 'Confidencialidad garantizada' }
+  { icon: './images/our_process/cohet desenvolupament.png', text: 'Respuesta en menos de 24 horas' },
+  { icon: './images/our_process/bombeta consulta inicial.png', text: 'Consulta inicial completamente gratuita' },
+  { icon: './images/icons/apps i webs_Mesa de trabajo 1.png', text: 'Soluciones personalizadas para tu negocio' },
+  { icon: './images/icons/ciberseguretat_Mesa de trabajo 1.png', text: 'Confidencialidad garantizada' }
 ];
 
 export const DIRECT_CONTACT_INFO: DirectContact[] = [

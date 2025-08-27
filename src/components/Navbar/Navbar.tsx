@@ -18,21 +18,28 @@ const Navbar: React.FC<NavbarProps> = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-white via-blue-100 to-blue-200 backdrop-blur-xl border-b border-blue-200/50 shadow-lg"
+      className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-slate-200/50 shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-24 md:h-22">
           {/* Logo principal - Left side */}
           <div className="flex items-center">
-            <img
-              src="./images/logos/Logotip-transparent.png"
-              alt="9DIGITZ"
-              className="h-28 md:h-36 object-contain select-none"
-              draggable={false}
-              loading="eager"
-              decoding="async"
-              style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.08))' }}
-            />
+            <motion.button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="focus:outline-none"
+            >
+              <img
+                src="./images/logos/Logotip-transparent.png"
+                alt="9DIGITZ"
+                className="h-28 md:h-36 object-contain select-none"
+                draggable={false}
+                loading="eager"
+                decoding="async"
+                style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.08))' }}
+              />
+            </motion.button>
           </div>
 
           {/* Navigation Menu - Center */}
