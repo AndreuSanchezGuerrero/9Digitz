@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext';
 import { WhiteToBlueGradient } from '../BackgroundGradients';
 import { SecuritySectionProps } from './types';
 import { SECURITY_CONSTANTS, SECURITY_FEATURES } from './constants';
 
 const SecuritySection: React.FC<SecuritySectionProps> = () => {
+  const { t } = useLanguage();
+
   return (
     <WhiteToBlueGradient>
       <section id="security" className="py-32">
@@ -17,11 +20,11 @@ const SecuritySection: React.FC<SecuritySectionProps> = () => {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-light text-slate-900 mb-6">
-              {SECURITY_CONSTANTS.TITLE.MAIN}{' '}
-              <span className="text-blue-400 font-medium">{SECURITY_CONSTANTS.TITLE.HIGHLIGHT}</span>
+              {t('security.title.main')}{' '}
+              <span className="text-blue-400 font-medium">{t('security.title.highlight')}</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              {SECURITY_CONSTANTS.SUBTITLE}
+              {t('security.subtitle')}
             </p>
           </motion.div>
 
@@ -41,10 +44,14 @@ const SecuritySection: React.FC<SecuritySectionProps> = () => {
                   <feature.icon className="text-blue-400" size={32} />
                 </motion.div>
                 <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-                  {feature.title}
+                  {index === 0 ? t('security.features.advanced.title') : 
+                   index === 1 ? t('security.features.certifications.title') : 
+                   t('security.features.monitoring.title')}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  {feature.description}
+                  {index === 0 ? t('security.features.advanced.description') : 
+                   index === 1 ? t('security.features.certifications.description') : 
+                   t('security.features.monitoring.description')}
                 </p>
               </motion.div>
             ))}
@@ -58,7 +65,7 @@ const SecuritySection: React.FC<SecuritySectionProps> = () => {
           >
             <CheckCircle2 className="text-blue-400" size={24} />
             <span className="text-slate-700 text-lg">
-              {SECURITY_CONSTANTS.GUARANTEE_TEXT}
+              {t('security.guarantee')}
             </span>
           </motion.div>
         </div>

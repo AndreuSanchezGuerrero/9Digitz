@@ -182,6 +182,18 @@ const translations = {
     'services.microsoft.benefits.1': 'Mayor seguridad en la gestión documental',
     'services.microsoft.benefits.2': 'Comunicación interna más eficiente',
     'services.microsoft.benefits.3': 'Uso óptimo de herramientas profesionales',
+
+    // Security Section
+    'security.title.main': 'Tecnología',
+    'security.title.highlight': 'segura',
+    'security.subtitle': 'Utilizamos las mejores prácticas de seguridad y tecnologías de vanguardia para proteger tu información y garantizar el éxito de tu proyecto.',
+    'security.guarantee': 'Garantía de satisfacción del 100% en todos nuestros proyectos',
+    'security.features.advanced.title': 'Seguridad Avanzada',
+    'security.features.advanced.description': 'Implementamos las mejores prácticas de seguridad para proteger tu información y datos.',
+    'security.features.certifications.title': 'Certificaciones',
+    'security.features.certifications.description': 'Cumplimos con estándares internacionales de calidad y seguridad en desarrollo.',
+    'security.features.monitoring.title': 'Monitoreo 24/7',
+    'security.features.monitoring.description': 'Supervisión continua de sistemas para garantizar disponibilidad y rendimiento.',
   },
   ca: {
     // Navbar
@@ -353,6 +365,18 @@ const translations = {
     'services.microsoft.benefits.1': 'Major seguretat en la gestió documental',
     'services.microsoft.benefits.2': 'Comunicació interna més eficient',
     'services.microsoft.benefits.3': 'Ús òptim d\'eines professionals',
+
+    // Security Section
+    'security.title.main': 'Tecnologia',
+    'security.title.highlight': 'segura',
+    'security.subtitle': 'Utilitzem les millors pràctiques de seguretat i tecnologies d\'avantguarda per protegir la teva informació i garantir l\'èxit del teu projecte.',
+    'security.guarantee': 'Garantia de satisfacció del 100% en tots els nostres projectes',
+    'security.features.advanced.title': 'Seguretat Avançada',
+    'security.features.advanced.description': 'Implementem les millors pràctiques de seguretat per protegir la teva informació i dades.',
+    'security.features.certifications.title': 'Certificacions',
+    'security.features.certifications.description': 'Complim amb estàndards internacionals de qualitat i seguretat en desenvolupament.',
+    'security.features.monitoring.title': 'Monitoratge 24/7',
+    'security.features.monitoring.description': 'Supervisió contínua de sistemes per garantir disponibilitat i rendiment.',
   }
 };
 
