@@ -1,12 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Clock, Users, Lightbulb } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext';
 import { BlueToWhiteGradient } from '../BackgroundGradients';
 import { scrollToSection } from '../../utils/scrollUtils';
 import { ProcessJourneyProps } from './types';
-import { PROCESS_CONSTANTS, PROCESS_STEPS } from './constants';
+import { PROCESS_STEPS } from './constants';
 
 const ProcessJourney: React.FC<ProcessJourneyProps> = () => {
+  const { t } = useLanguage();
+
   return (
     <BlueToWhiteGradient>
       <section id="process" className="py-32">
@@ -18,11 +21,11 @@ const ProcessJourney: React.FC<ProcessJourneyProps> = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-light text-white mb-6">
-            {PROCESS_CONSTANTS.TITLE.MAIN}{' '}
-            <span className="text-blue-400 font-medium">{PROCESS_CONSTANTS.TITLE.HIGHLIGHT}</span>
+            {t('process.title.main')}{' '}
+            <span className="text-blue-400 font-medium">{t('process.title.highlight')}</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            {PROCESS_CONSTANTS.SUBTITLE}
+            {t('process.subtitle')}
           </p>
         </motion.div>
 
@@ -60,11 +63,11 @@ const ProcessJourney: React.FC<ProcessJourneyProps> = () => {
                   </div>
 
                   <h3 className="text-xl font-semibold text-white mb-2">
-                    {step.title}
+                    {t(`process.step${index + 1}.title`)}
                   </h3>
 
                   <p className="text-slate-400 text-sm mb-4 leading-relaxed">
-                    {step.description}
+                    {t(`process.step${index + 1}.description`)}
                   </p>
 
                   <div className="flex items-center justify-center space-x-2 text-blue-400">
@@ -94,11 +97,11 @@ const ProcessJourney: React.FC<ProcessJourneyProps> = () => {
             <div className="flex items-center justify-center space-x-3 mb-4">
               <Lightbulb className="text-blue-400" size={32} />
               <h3 className="text-2xl font-semibold text-white">
-                {PROCESS_CONSTANTS.CTA.TITLE}
+                {t('process.cta.title')}
               </h3>
             </div>
             <p className="text-slate-400 mb-6">
-              {PROCESS_CONSTANTS.CTA.DESCRIPTION}
+              {t('process.cta.description')}
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -110,7 +113,7 @@ const ProcessJourney: React.FC<ProcessJourneyProps> = () => {
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0076e3'}
             >
               <Users size={20} />
-              <span>{PROCESS_CONSTANTS.CTA.BUTTON}</span>
+              <span>{t('process.cta.button')}</span>
             </motion.button>
           </div>
         </motion.div>

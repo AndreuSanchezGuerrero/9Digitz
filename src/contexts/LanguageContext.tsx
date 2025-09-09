@@ -194,6 +194,28 @@ const translations = {
     'security.features.certifications.description': 'Cumplimos con estándares internacionales de calidad y seguridad en desarrollo.',
     'security.features.monitoring.title': 'Monitoreo 24/7',
     'security.features.monitoring.description': 'Supervisión continua de sistemas para garantizar disponibilidad y rendimiento.',
+    
+    // Process Section
+    'process.title.main': 'Nuestro',
+    'process.title.highlight': 'proceso',
+    'process.subtitle': 'Un enfoque estructurado y transparente que garantiza el éxito de tu proyecto desde el primer día.',
+    'process.cta.title': '¿Tienes una idea?',
+    'process.cta.description': 'Convierte tu visión en realidad. Nuestro equipo de expertos está listo para hacer que tu proyecto sea un éxito.',
+    'process.cta.button': 'Hablar con un experto',
+    
+    // Process Steps
+    'process.step1.title': 'Consulta inicial',
+    'process.step1.description': 'Analizamos tus necesidades y objetivos',
+    'process.step1.duration': '1 día',
+    'process.step2.title': 'Propuesta técnica',
+    'process.step2.description': 'Diseñamos la solución perfecta para ti',
+    'process.step2.duration': '3-5 días',
+    'process.step3.title': 'Desarrollo',
+    'process.step3.description': 'Implementamos con metodologías ágiles',
+    'process.step3.duration': '2-12 semanas',
+    'process.step4.title': 'Entrega y soporte',
+    'process.step4.description': 'Lanzamiento y mantenimiento continuo',
+    'process.step4.duration': 'Ongoing',
   },
   ca: {
     // Navbar
@@ -377,6 +399,28 @@ const translations = {
     'security.features.certifications.description': 'Complim amb estàndards internacionals de qualitat i seguretat en desenvolupament.',
     'security.features.monitoring.title': 'Monitoratge 24/7',
     'security.features.monitoring.description': 'Supervisió contínua de sistemes per garantir disponibilitat i rendiment.',
+    
+    // Process Section
+    'process.title.main': 'El nostre',
+    'process.title.highlight': 'procés',
+    'process.subtitle': 'Un enfocament estructurat i transparent que garanteix l\'èxit del teu projecte des del primer dia.',
+    'process.cta.title': 'Tens una idea?',
+    'process.cta.description': 'Converteix la teva visió en realitat. El nostre equip d\'experts està preparat per fer que el teu projecte sigui un èxit.',
+    'process.cta.button': 'Parlar amb un expert',
+    
+    // Process Steps
+    'process.step1.title': 'Consulta inicial',
+    'process.step1.description': 'Analitzem les teves necessitats i objectius',
+    'process.step1.duration': '1 dia',
+    'process.step2.title': 'Proposta tècnica',
+    'process.step2.description': 'Dissenyem la solució perfecta per a tu',
+    'process.step2.duration': '3-5 dies',
+    'process.step3.title': 'Desenvolupament',
+    'process.step3.description': 'Implementem amb metodologies àgils',
+    'process.step3.duration': '2-12 setmanes',
+    'process.step4.title': 'Lliurament i suport',
+    'process.step4.description': 'Llançament i manteniment continu',
+    'process.step4.duration': 'Continu',
   }
 };
 
