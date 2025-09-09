@@ -81,8 +81,7 @@ const Navbar: React.FC<NavbarProps> = () => {
               initial={{ scale: 1.1 }}
               animate={{ scale: 1.1 }}
               style={{
-                willChange: 'transform',
-                filter: 'drop-shadow(0 6px 12px rgba(0,118,227,0.25)) drop-shadow(0 2px 4px rgba(0,118,227,0.15))'
+                willChange: 'transform'
               }}
             />
           </div>
