@@ -67,7 +67,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-light text-white mb-6">
@@ -84,7 +84,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="space-y-8"
           >
             <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8">
@@ -97,7 +97,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.25, delay: index * 0.05 }}
                     className="flex items-center space-x-3"
                   >
                     <div className="w-8 h-8 flex-shrink-0">
@@ -132,7 +132,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
           >
             <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8">
               <div className="space-y-6">
@@ -140,7 +140,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
+                  transition={{ duration: 0.25, delay: 0.05 }}
                 >
                   <label className="block text-white font-medium mb-2">
                     {CONTACT_CONSTANTS.FORM_LABELS.NAME}
@@ -163,7 +163,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                  transition={{ duration: 0.25, delay: 0.1 }}
                 >
                   <label className="block text-white font-medium mb-2">
                     {CONTACT_CONSTANTS.FORM_LABELS.EMAIL}
@@ -186,7 +186,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
+                  transition={{ duration: 0.25, delay: 0.15 }}
                 >
                   <label className="block text-white font-medium mb-2">
                     {CONTACT_CONSTANTS.FORM_LABELS.PHONE}
@@ -208,7 +208,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
+                  transition={{ duration: 0.25, delay: 0.2 }}
                 >
                   <label className="block text-white font-medium mb-2">
                     {CONTACT_CONSTANTS.FORM_LABELS.SERVICE}
@@ -232,7 +232,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
+                  transition={{ duration: 0.25, delay: 0.25 }}
                 >
                   <label className="block text-white font-medium mb-2">
                     {CONTACT_CONSTANTS.FORM_LABELS.MESSAGE}
@@ -252,7 +252,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
+                  transition={{ duration: 0.25, delay: 0.3 }}
                 >
                   <motion.button
                     type="submit"

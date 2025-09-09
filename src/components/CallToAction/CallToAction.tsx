@@ -30,7 +30,7 @@ const CallToAction: React.FC<CallToActionProps> = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-light mb-6">
@@ -48,7 +48,7 @@ const CallToAction: React.FC<CallToActionProps> = () => {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="space-y-8"
           >
             <div className="flex flex-col sm:flex-row gap-4">
@@ -85,7 +85,7 @@ const CallToAction: React.FC<CallToActionProps> = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               className="bg-white/80 backdrop-blur-xl border border-slate-200 rounded-3xl p-8"
             >
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">
@@ -97,7 +97,7 @@ const CallToAction: React.FC<CallToActionProps> = () => {
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.25, delay: index * 0.05 }}
                     className="flex items-center space-x-3"
                   >
                     <div className="w-2 h-2 bg-blue-400 rounded-full" />
@@ -112,7 +112,7 @@ const CallToAction: React.FC<CallToActionProps> = () => {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="text-center"
           >
             <motion.div
@@ -150,7 +150,7 @@ const CallToAction: React.FC<CallToActionProps> = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="text-center mt-16"
         >
           <motion.button
