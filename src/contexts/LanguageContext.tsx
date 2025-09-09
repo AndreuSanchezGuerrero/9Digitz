@@ -270,6 +270,25 @@ const translations = {
     'contact.directContact.phone': '+34 937 374 400',
     'contact.directContact.email': 'info@9digitz.com',
     'contact.directContact.chat': 'Chat en vivo disponible',
+    
+    // Call to Action Section
+    'cta.title.main': 'Comienza tu',
+    'cta.title.highlight': 'transformación',
+    'cta.title.suffix': 'digital hoy',
+    'cta.subtitle': 'Únete a más de 200 empresas que han confiado en 9DIGITZ para impulsar su crecimiento tecnológico.',
+    'cta.whyChoose.title': '¿Por qué elegir 9DIGITZ?',
+    'cta.features.security': 'Seguridad y privacidad de datos',
+    'cta.features.solutions': 'Soluciones personalizadas para tu negocio',
+    'cta.features.experts': 'Equipo de expertos certificados',
+    'cta.features.support': 'Soporte técnico 24/7',
+    'cta.features.guarantee': 'Garantía de satisfacción 100%',
+    'cta.buttons.consultation': 'Consulta Gratuita',
+    'cta.buttons.call': 'Llámanos',
+    'cta.buttons.mainCta': 'Solicitar consulta gratuita',
+    'cta.contact.phone': '+34 937 374 400',
+    'cta.contact.readyTitle': '¿Listo para empezar?',
+    'cta.contact.readySubtitle': 'Contacta con nosotros hoy mismo',
+    'cta.footerText': 'Sin compromiso • Consulta gratuita • Respuesta en 24h',
   },
   ca: {
     // Navbar
@@ -529,6 +548,25 @@ const translations = {
     'contact.directContact.phone': '+34 937 374 400',
     'contact.directContact.email': 'info@9digitz.com',
     'contact.directContact.chat': 'Xat en viu disponible',
+    
+    // Call to Action Section
+    'cta.title.main': 'Comença la teva',
+    'cta.title.highlight': 'transformació',
+    'cta.title.suffix': 'digital avui',
+    'cta.subtitle': 'Uneix-te a més de 200 empreses que han confiat en 9DIGITZ per impulsar el seu creixement tecnològic.',
+    'cta.whyChoose.title': 'Per què triar 9DIGITZ?',
+    'cta.features.security': 'Seguretat i privacitat de dades',
+    'cta.features.solutions': 'Solucions personalitzades per al teu negoci',
+    'cta.features.experts': 'Equip d\'experts certificats',
+    'cta.features.support': 'Suport tècnic 24/7',
+    'cta.features.guarantee': 'Garantia de satisfacció 100%',
+    'cta.buttons.consultation': 'Consulta Gratuïta',
+    'cta.buttons.call': 'Truca\'ns',
+    'cta.buttons.mainCta': 'Sol·licitar consulta gratuïta',
+    'cta.contact.phone': '+34 937 374 400',
+    'cta.contact.readyTitle': 'Preparat per començar?',
+    'cta.contact.readySubtitle': 'Contacta amb nosaltres avui mateix',
+    'cta.footerText': 'Sense compromís • Consulta gratuïta • Resposta en 24h',
   }
 };
 
