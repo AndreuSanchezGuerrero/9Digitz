@@ -32,6 +32,12 @@ const translations = {
     'hero.button.primary': 'Comenzar proyecto',
     'hero.button.secondary': 'Ver servicios',
     'hero.footer': 'Profesionales altamente cualificados a tu servicio',
+    
+    // WhatsApp Button
+    'whatsapp.message': 'Hola! Me interesa conocer más sobre los servicios de 9DIGITZ. ¿Podrían ayudarme?',
+    'whatsapp.button': '¿Cómo podemos ayudarte?',
+    'whatsapp.tooltip': 'Chatea con nosotros',
+    'whatsapp.greeting': '¡Hola! 👋 ¿En qué podemos ayudarte hoy?',
   },
   ca: {
     // Navbar
@@ -53,6 +59,12 @@ const translations = {
     'hero.button.primary': 'Començar projecte',
     'hero.button.secondary': 'Veure serveis',
     'hero.footer': 'Professionals altament qualificats al teu servei',
+    
+    // WhatsApp Button
+    'whatsapp.message': 'Hola! M\'interessa conèixer més sobre els serveis de 9DIGITZ. Podríeu ajudar-me?',
+    'whatsapp.button': 'Com podem ajudar-te?',
+    'whatsapp.tooltip': 'Xateja amb nosaltres',
+    'whatsapp.greeting': 'Hola! 👋 En què podem ajudar-te avui?',
   }
 };
 
