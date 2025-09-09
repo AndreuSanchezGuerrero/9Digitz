@@ -38,6 +38,34 @@ const translations = {
     'whatsapp.button': '¿Cómo podemos ayudarte?',
     'whatsapp.tooltip': 'Chatea con nosotros',
     'whatsapp.greeting': '¡Hola! 👋 ¿En qué podemos ayudarte hoy?',
+    
+    // Services Section
+    'services.title.main': 'Nuestros',
+    'services.title.highlight': 'servicios',
+    'services.subtitle': 'Soluciones tecnológicas integrales para impulsar tu negocio hacia el futuro digital.',
+    'services.cta': 'Solicitar consulta gratuita',
+    
+    // Individual Services
+    'services.apps.name': 'DESARROLLO DE APPs Y WEBS',
+    'services.apps.description': 'Desarrollo a medida',
+    'services.marketing.name': 'MARKETING DIGITAL',
+    'services.marketing.description': 'Estrategias online',
+    'services.cloud.name': 'SERVIDORES CLOUD',
+    'services.cloud.description': 'Infraestructura escalable y segura',
+    'services.security.name': 'CIBERSEGURIDAD',
+    'services.security.description': 'Protección integral',
+    'services.voip.name': 'CENTRALITAS VOIP/SIP',
+    'services.voip.description': 'Comunicaciones empresariales',
+    'services.internet.name': 'OPERADOR DE INTERNET',
+    'services.internet.description': 'Soluciones de conectividad',
+    'services.digital.name': 'CARTELERÍA DIGITAL',
+    'services.digital.description': 'Señalización inteligente',
+    'services.interactive.name': 'PANTALLAS INTERACTIVAS',
+    'services.interactive.description': 'Interfaces interactivas',
+    'services.audiovisual.name': 'PRODUCCIÓN AUDIOVISUAL',
+    'services.audiovisual.description': 'Contenido audiovisual',
+    'services.microsoft.name': 'PARTNER MICROSOFT 365',
+    'services.microsoft.description': 'Transformación completa',
   },
   ca: {
     // Navbar
@@ -65,6 +93,34 @@ const translations = {
     'whatsapp.button': 'Com podem ajudar-te?',
     'whatsapp.tooltip': 'Xateja amb nosaltres',
     'whatsapp.greeting': 'Hola! 👋 En què podem ajudar-te avui?',
+    
+    // Services Section
+    'services.title.main': 'Els nostres',
+    'services.title.highlight': 'serveis',
+    'services.subtitle': 'Solucions tecnològiques integrals per impulsar el teu negoci cap al futur digital.',
+    'services.cta': 'Sol·licitar consulta gratuïta',
+    
+    // Individual Services
+    'services.apps.name': 'DESENVOLUPAMENT D\'APPs I WEBS',
+    'services.apps.description': 'Desenvolupament a mida',
+    'services.marketing.name': 'MÀRQUETING DIGITAL',
+    'services.marketing.description': 'Estratègies online',
+    'services.cloud.name': 'SERVIDORS CLOUD',
+    'services.cloud.description': 'Infraestructura escalable i segura',
+    'services.security.name': 'CIBERSEGURETAT',
+    'services.security.description': 'Protecció integral',
+    'services.voip.name': 'CENTRALETES VOIP/SIP',
+    'services.voip.description': 'Comunicacions empresarials',
+    'services.internet.name': 'OPERADOR D\'INTERNET',
+    'services.internet.description': 'Solucions de connectivitat',
+    'services.digital.name': 'CARTELLERIA DIGITAL',
+    'services.digital.description': 'Senyalització intel·ligent',
+    'services.interactive.name': 'PANTALLES INTERACTIVES',
+    'services.interactive.description': 'Interfícies interactives',
+    'services.audiovisual.name': 'PRODUCCIÓ AUDIOVISUAL',
+    'services.audiovisual.description': 'Contingut audiovisual',
+    'services.microsoft.name': 'PARTNER MICROSOFT 365',
+    'services.microsoft.description': 'Transformació completa',
   }
 };
 
