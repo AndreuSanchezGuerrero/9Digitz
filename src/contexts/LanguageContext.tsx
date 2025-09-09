@@ -309,6 +309,15 @@ const translations = {
     'footer.legal.terms': 'Términos de uso',
     'footer.legal.notice': 'Aviso legal',
     'footer.copyright': '© 2025 9DIGITZ. Todos los derechos reservados.',
+    
+    // Job Modal
+    'jobModal.title': '¡Gracias por tu interés!',
+    'jobModal.subtitle': 'Nos emociona saber que quieres formar parte de 9DIGITZ',
+    'jobModal.noPositions.title': 'Actualmente no tenemos ofertas disponibles',
+    'jobModal.noPositions.description': 'Pero siempre estamos buscando talento excepcional. Te invitamos a enviarnos tu CV para futuras oportunidades.',
+    'jobModal.sendCV': 'Enviar CV',
+    'jobModal.close': 'Cerrar',
+    'jobModal.notification': 'Te notificaremos cuando tengamos nuevas oportunidades',
   },
   ca: {
     // Navbar
@@ -607,6 +616,15 @@ const translations = {
     'footer.legal.terms': 'Termes d\'ús',
     'footer.legal.notice': 'Avís legal',
     'footer.copyright': '© 2025 9DIGITZ. Tots els drets reservats.',
+    
+    // Job Modal
+    'jobModal.title': 'Gràcies pel teu interès!',
+    'jobModal.subtitle': 'Ens emociona saber que vols formar part de 9DIGITZ',
+    'jobModal.noPositions.title': 'Actualment no tenim ofertes disponibles',
+    'jobModal.noPositions.description': 'Però sempre estem buscant talent excepcional. Et convidem a enviar-nos el teu CV per a futures oportunitats.',
+    'jobModal.sendCV': 'Enviar CV',
+    'jobModal.close': 'Tancar',
+    'jobModal.notification': 'Et notificarem quan tinguem noves oportunitats',
   }
 };
 
