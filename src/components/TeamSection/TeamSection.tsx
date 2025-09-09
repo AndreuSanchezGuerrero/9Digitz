@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Briefcase } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext';
 import { WhiteToBlueGradient } from '../BackgroundGradients';
 import JobModal from '../JobModal';
 import { TeamSectionProps } from './types';
-import { TEAM_CONSTANTS, TEAM_MEMBERS } from './constants';
+import { TEAM_MEMBERS } from './constants';
 
 const TeamSection: React.FC<TeamSectionProps> = () => {
+  const { t } = useLanguage();
   const [isJobModalOpen, setIsJobModalOpen] = React.useState(false);
 
   // Organize team members by level for the org chart

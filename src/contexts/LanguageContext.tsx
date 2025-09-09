@@ -216,6 +216,14 @@ const translations = {
     'process.step4.title': 'Entrega y soporte',
     'process.step4.description': 'Lanzamiento y mantenimiento continuo',
     'process.step4.duration': 'Ongoing',
+    
+    // Team Section
+    'team.title.main': 'Nuestro',
+    'team.title.highlight': 'equipo',
+    'team.subtitle': 'Un equipo de profesionales altamente cualificados comprometidos con la excelencia y la innovación tecnológica.',
+    'team.cta.title': '¿Quieres formar parte del equipo?',
+    'team.cta.description': 'Estamos siempre buscando talento excepcional para unirse a nuestro equipo de profesionales.',
+    'team.cta.button': 'Ver oportunidades',
   },
   ca: {
     // Navbar
@@ -421,6 +429,14 @@ const translations = {
     'process.step4.title': 'Lliurament i suport',
     'process.step4.description': 'Llançament i manteniment continu',
     'process.step4.duration': 'Continu',
+    
+    // Team Section
+    'team.title.main': 'El nostre',
+    'team.title.highlight': 'equip',
+    'team.subtitle': 'Un equip de professionals altament qualificats compromesos amb l\'excel·lència i la innovació tecnològica.',
+    'team.cta.title': 'Vols formar part de l\'equip?',
+    'team.cta.description': 'Estem sempre buscant talent excepcional per unir-se al nostre equip de professionals.',
+    'team.cta.button': 'Veure oportunitats',
   }
 };
 
