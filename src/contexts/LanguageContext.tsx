@@ -23,6 +23,15 @@ const translations = {
     // Language selector
     'lang.spanish': 'Español',
     'lang.catalan': 'Català',
+    
+    // Hero
+    'hero.title.main': 'Servicios',
+    'hero.title.highlight': 'digitales',
+    'hero.title.suffix': 'avanzados',
+    'hero.subtitle': 'Transformamos tu negocio con tecnología de vanguardia. Desde cloud computing hasta marketing digital, somos tu socio tecnológico integral.',
+    'hero.button.primary': 'Comenzar proyecto',
+    'hero.button.secondary': 'Ver servicios',
+    'hero.footer': 'Profesionales altamente cualificados a tu servicio',
   },
   ca: {
     // Navbar
@@ -35,6 +44,15 @@ const translations = {
     // Language selector
     'lang.spanish': 'Español',
     'lang.catalan': 'Català',
+    
+    // Hero
+    'hero.title.main': 'Serveis',
+    'hero.title.highlight': 'digitals',
+    'hero.title.suffix': 'avançats',
+    'hero.subtitle': 'Transformem el teu negoci amb tecnologia d\'avantguarda. Des de cloud computing fins a màrqueting digital, som el teu soci tecnològic integral.',
+    'hero.button.primary': 'Començar projecte',
+    'hero.button.secondary': 'Veure serveis',
+    'hero.footer': 'Professionals altament qualificats al teu servei',
   }
 };
 
