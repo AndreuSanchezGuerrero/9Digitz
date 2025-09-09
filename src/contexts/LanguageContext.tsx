@@ -289,6 +289,26 @@ const translations = {
     'cta.contact.readyTitle': '¿Listo para empezar?',
     'cta.contact.readySubtitle': 'Contacta con nosotros hoy mismo',
     'cta.footerText': 'Sin compromiso • Consulta gratuita • Respuesta en 24h',
+    
+    // Footer
+    'footer.description': 'Transformamos empresas a través de la tecnología. Somos tu socio estratégico en la era digital, ofreciendo soluciones innovadoras y personalizadas.',
+    'footer.services.title': 'Servicios',
+    'footer.solutions.title': 'Soluciones',
+    'footer.team.title': 'Nuestro equipo',
+    'footer.solutions.transformation': 'Transformación Digital',
+    'footer.solutions.migration': 'Migración a la Nube',
+    'footer.solutions.audits': 'Auditorías de Seguridad',
+    'footer.solutions.consulting': 'Consultoría Tecnológica',
+    'footer.solutions.support': 'Soporte Técnico 24/7',
+    'footer.solutions.integration': 'Integración de Sistemas',
+    'footer.solutions.automation': 'Automatización de Procesos',
+    'footer.solutions.backup': 'Backup y Recuperación',
+    'footer.solutions.monitoring': 'Monitorización IT',
+    'footer.solutions.optimization': 'Optimización de Infraestructura',
+    'footer.legal.privacy': 'Política de privacidad',
+    'footer.legal.terms': 'Términos de uso',
+    'footer.legal.notice': 'Aviso legal',
+    'footer.copyright': '© 2025 9DIGITZ. Todos los derechos reservados.',
   },
   ca: {
     // Navbar
