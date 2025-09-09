@@ -5,7 +5,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { WhiteToBlueGradient } from '../BackgroundGradients';
 import JobModal from '../JobModal';
 import { TeamSectionProps } from './types';
-import { TEAM_MEMBERS } from './constants';
+import { TEAM_MEMBERS, TEAM_CONSTANTS } from './constants';
 
 const TeamSection: React.FC<TeamSectionProps> = () => {
   const { t } = useLanguage();
