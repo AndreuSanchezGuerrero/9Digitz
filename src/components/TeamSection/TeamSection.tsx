@@ -148,11 +148,11 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
               <div className="flex items-center justify-center space-x-3 mb-4">
                 <Users className="text-blue-400" size={32} />
                 <h3 className="text-2xl font-semibold text-slate-900">
-                  ¿Quieres formar parte del equipo?
+                  {t('team.cta.title')}
                 </h3>
               </div>
               <p className="text-slate-600 mb-6">
-                Estamos siempre buscando talento excepcional para unirse a nuestro equipo de profesionales.
+                {t('team.cta.description')}
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -164,7 +164,7 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0076e3'}
               >
                 <Briefcase size={20} />
-                <span>Ver oportunidades</span>
+                <span>{t('team.cta.button')}</span>
               </motion.button>
             </div>
           </motion.div>
