@@ -567,6 +567,26 @@ const translations = {
     'cta.contact.readyTitle': 'Preparat per començar?',
     'cta.contact.readySubtitle': 'Contacta amb nosaltres avui mateix',
     'cta.footerText': 'Sense compromís • Consulta gratuïta • Resposta en 24h',
+    
+    // Footer
+    'footer.description': 'Transformem empreses a través de la tecnologia. Som el teu soci estratègic en l\'era digital, oferint solucions innovadores i personalitzades.',
+    'footer.services.title': 'Serveis',
+    'footer.solutions.title': 'Solucions',
+    'footer.team.title': 'El nostre equip',
+    'footer.solutions.transformation': 'Transformació Digital',
+    'footer.solutions.migration': 'Migració al Núvol',
+    'footer.solutions.audits': 'Auditories de Seguretat',
+    'footer.solutions.consulting': 'Consultoria Tecnològica',
+    'footer.solutions.support': 'Suport Tècnic 24/7',
+    'footer.solutions.integration': 'Integració de Sistemes',
+    'footer.solutions.automation': 'Automatització de Processos',
+    'footer.solutions.backup': 'Backup i Recuperació',
+    'footer.solutions.monitoring': 'Monitorització IT',
+    'footer.solutions.optimization': 'Optimització d\'Infraestructura',
+    'footer.legal.privacy': 'Política de privacitat',
+    'footer.legal.terms': 'Termes d\'ús',
+    'footer.legal.notice': 'Avís legal',
+    'footer.copyright': '© 2025 9DIGITZ. Tots els drets reservats.',
   }
 };
 

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 import { scrollToSection } from '../utils/scrollUtils';
 
 const Logo = () => (
@@ -10,6 +11,8 @@ const Logo = () => (
 );
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   const handleServiceClick = () => {
     scrollToSection('services');
   };
@@ -19,32 +22,31 @@ const Footer = () => {
   };
 
   const footerLinks = {
-    'Servicios': [
-      'Desarrollo de Apps y Webs',
-      'Marketing Digital',
-      'Servidores Cloud',
-      'Ciberseguridad',
-      'Centralitas VoIP/SIP',
-      'Operador de Internet',
-      'Cartelería Digital',
-      'Pantallas Interactivas',
-      'Producción Audiovisual',
-      'Partner Microsoft 365'
+    [t('footer.services.title')]: [
+      t('services.apps.name'),
+      t('services.marketing.name'),
+      t('services.cloud.name'),
+      t('services.security.name'),
+      t('services.voip.name'),
+      t('services.internet.name'),
+      t('services.digital.name'),
+      t('services.interactive.name'),
+      t('services.audiovisual.name'),
+      t('services.microsoft.name')
     ],
-    'Soluciones': [
-      'Transformación Digital',
-      'Migración a la Nube',
-      'Auditorías de Seguridad',
-      'Consultoría Tecnológica',
-      'Soporte Técnico 24/7',
-      'Integración de Sistemas',
-      'Automatización de Procesos',
-      'Backup y Recuperación',
-      'Monitorización IT',
-      'Optimización de Infraestructura'
+    [t('footer.solutions.title')]: [
+      t('footer.solutions.transformation'),
+      t('footer.solutions.migration'),
+      t('footer.solutions.audits'),
+      t('footer.solutions.consulting'),
+      t('footer.solutions.support'),
+      t('footer.solutions.integration'),
+      t('footer.solutions.automation'),
+      t('footer.solutions.backup'),
+      t('footer.solutions.monitoring'),
+      t('footer.solutions.optimization')
     ],
-
-    'Nuestro equipo': [
+    [t('footer.team.title')]: [
       'Josep M',
       'Riki',
       'Andreu',
@@ -70,9 +72,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-blue-100 mb-6 leading-relaxed">
-              Transformamos empresas a través de la tecnología. 
-              Somos tu socio estratégico en la era digital, 
-              ofreciendo soluciones innovadoras y personalizadas.
+              {t('footer.description')}
             </p>
           </div>
 
@@ -85,9 +85,9 @@ const Footer = () => {
                   <li key={index}>
                     <button
                       onClick={
-                        category === 'Servicios' 
+                       category === t('footer.services.title')
                           ? handleServiceClick 
-                          : category === 'Nuestro equipo' 
+                         : category === t('footer.team.title')
                           ? handleTeamClick 
                           : undefined
                       }
