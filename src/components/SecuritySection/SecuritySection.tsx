@@ -13,7 +13,7 @@ const SecuritySection: React.FC<SecuritySectionProps> = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-light text-slate-900 mb-6">
@@ -31,7 +31,7 @@ const SecuritySection: React.FC<SecuritySectionProps> = () => {
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
                 className="text-center"
               >
                 <motion.div
@@ -53,7 +53,7 @@ const SecuritySection: React.FC<SecuritySectionProps> = () => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
             className="flex items-center justify-center mt-12 space-x-4"
           >
             <CheckCircle2 className="text-blue-400" size={24} />

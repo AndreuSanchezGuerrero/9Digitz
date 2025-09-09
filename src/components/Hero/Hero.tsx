@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = () => {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 md:mb-6 leading-tight"
         >
           {HERO_CONSTANTS.TITLE.MAIN}{' '}
@@ -50,7 +50,7 @@ const Hero: React.FC<HeroProps> = () => {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
           className="text-lg md:text-xl lg:text-2xl text-slate-300 mb-6 md:mb-8 max-w-3xl mx-auto font-light leading-relaxed"
         >
           {HERO_CONSTANTS.SUBTITLE}
@@ -59,7 +59,7 @@ const Hero: React.FC<HeroProps> = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <motion.button
@@ -87,7 +87,7 @@ const Hero: React.FC<HeroProps> = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.4 }}
           className="mt-12 md:mt-16 text-slate-400 text-sm"
         >
           {HERO_CONSTANTS.FOOTER_TEXT}

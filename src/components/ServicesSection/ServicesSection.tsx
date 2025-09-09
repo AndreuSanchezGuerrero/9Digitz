@@ -27,7 +27,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-light text-white mb-6">
@@ -45,7 +45,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
                 key={service.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
                 whileHover={{ y: -5, scale: 1.02 }}
                 onClick={() => handleServiceClick(service)}
                 className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 hover:bg-slate-800/70 transition-all duration-300 text-center cursor-pointer flex flex-col h-full"
@@ -74,7 +74,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: "100%" }}
-                  transition={{ duration: 0.8, delay: index * 0.05 + 0.3 }}
+                  transition={{ duration: 0.4, delay: index * 0.03 + 0.15 }}
                   className={`mt-4 h-0.5 bg-gradient-to-r ${service.color} rounded-full flex-shrink-0`}
                 />
               </motion.div>
@@ -84,7 +84,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.4, delay: 0.25 }}
             className="text-center mt-16"
           >
             <button 

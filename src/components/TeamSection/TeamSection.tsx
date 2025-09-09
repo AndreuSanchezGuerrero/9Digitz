@@ -19,7 +19,7 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={{ duration: 0.3, delay: index * 0.05 }}
       whileHover={{ y: -5, scale: 1.02 }}
       className={`bg-white/80 backdrop-blur-xl border border-slate-200 rounded-3xl p-6 text-center relative ${isConnected ? 'border-blue-300' : ''
         }`}
@@ -58,7 +58,7 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-light text-slate-900 mb-6">
@@ -74,7 +74,7 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           >
           </motion.div>
@@ -139,7 +139,7 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
             className="text-center mt-16"
           >
             <div className="bg-white/80 backdrop-blur-xl border border-slate-200 rounded-3xl p-8 max-w-2xl mx-auto">
