@@ -106,19 +106,19 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-6 mb-4 md:mb-0">
               <div className="text-blue-100 text-sm">
-                © 2025 9DIGITZ. Todos los derechos reservados.
+                {t('footer.copyright')}
               </div>
             </div>
 
             <div className="flex items-center space-x-6 text-blue-100 text-sm">
               <a href="#" className="hover:text-white transition-colors">
-                Política de privacidad
+                {t('footer.legal.privacy')}
               </a>
               <a href="#" className="hover:text-white transition-colors">
-                Términos de uso
+                {t('footer.legal.terms')}
               </a>
               <a href="#" className="hover:text-white transition-colors">
-                Aviso legal
+                {t('footer.legal.notice')}
               </a>
             </div>
           </div>
