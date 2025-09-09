@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../contexts/LanguageContext';
 import { BlueToWhiteGradient } from '../BackgroundGradients';
 import ServiceModal from '../ServiceModal';
 import { scrollToSection } from '../../utils/scrollUtils';
 import { ServicesSectionProps, Service } from './types';
-import { SERVICES_CONSTANTS, SERVICES } from './constants';
+import { SERVICES } from './constants';
 
 const ServicesSection: React.FC<ServicesSectionProps> = () => {
+  const { t } = useLanguage();
   const [selectedService, setSelectedService] = React.useState<Service | null>(null);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
@@ -31,16 +33,29 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-light text-white mb-6">
-              {SERVICES_CONSTANTS.TITLE.MAIN}{' '}
-              <span className="text-blue-400 font-medium">{SERVICES_CONSTANTS.TITLE.HIGHLIGHT}</span>
+              {t('services.title.main')}{' '}
+              <span className="text-blue-400 font-medium">{t('services.title.highlight')}</span>
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              {SERVICES_CONSTANTS.SUBTITLE}
+              {t('services.subtitle')}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {SERVICES.map((service, index) => (
+            {SERVICES.map((service, index) => {
+              // Get translated service data
+              const serviceKey = service.name.toLowerCase().includes('app') ? 'apps' :
+                               service.name.toLowerCase().includes('marketing') ? 'marketing' :
+                               service.name.toLowerCase().includes('cloud') ? 'cloud' :
+                               service.name.toLowerCase().includes('ciberseguridad') ? 'security' :
+                               service.name.toLowerCase().includes('voip') ? 'voip' :
+                               service.name.toLowerCase().includes('operador') ? 'internet' :
+                               service.name.toLowerCase().includes('cartelería') ? 'digital' :
+                               service.name.toLowerCase().includes('pantallas') ? 'interactive' :
+                               service.name.toLowerCase().includes('audiovisual') ? 'audiovisual' :
+                               'microsoft';
+              
+              return (
               <motion.div
                 key={service.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -64,11 +79,11 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
                 </div>
 
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  {service.name}
+                  {t(`services.${serviceKey}.name`)}
                 </h3>
                 
                 <p className="text-slate-400 text-sm leading-relaxed flex-grow">
-                  {service.description}
+                  {t(`services.${serviceKey}.description`)}
                 </p>
 
                 <motion.div
@@ -78,7 +93,8 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
                   className={`mt-4 h-0.5 bg-gradient-to-r ${service.color} rounded-full flex-shrink-0`}
                 />
               </motion.div>
-            ))}
+              );
+            })}
           </div>
 
           <motion.div
@@ -94,7 +110,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#005bb5'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0076e3'}
             >
-              {SERVICES_CONSTANTS.CTA_BUTTON}
+              {t('services.cta')}
             </button>
           </motion.div>
         </div>
