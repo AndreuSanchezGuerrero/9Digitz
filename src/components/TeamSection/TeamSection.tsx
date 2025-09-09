@@ -44,14 +44,43 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
       </h3>
 
       <p className="text-blue-600 font-medium mb-2">
-        {member.position}
+        {getTranslatedPosition(member.position)}
       </p>
 
       <p className="text-slate-600 text-sm mb-4">
-        {member.department}
+        {getTranslatedDepartment(member.department)}
       </p>
     </motion.div>
   );
+
+  // Function to get translated position
+  const getTranslatedPosition = (position: string) => {
+    const positionMap: { [key: string]: string } = {
+      'CEO - Founder': 'team.positions.ceo',
+      'Adjunt a Direcció': 'team.positions.adjunt',
+      'Cap Informàtica i Programació': 'team.positions.cap_informatica',
+      'Administració i Atenció al Client': 'team.positions.administracio',
+      'Marketing i Xarxes Socials': 'team.positions.marketing',
+      'Integracions API i Desenvolupament': 'team.positions.integracions',
+      'Comptabilitat': 'team.positions.comptabilitat',
+      'Enginyer Telecomunicacions': 'team.positions.enginyer'
+    };
+    return t(positionMap[position] || position);
+  };
+
+  // Function to get translated department
+  const getTranslatedDepartment = (department: string) => {
+    const departmentMap: { [key: string]: string } = {
+      'Dirección General': 'team.departments.direccio',
+      'Cap Marketing/Audiovisuals': 'team.departments.marketing_audiovisuals',
+      'Desarrollo Tecnológico': 'team.departments.desarrollo',
+      'Administración': 'team.departments.administracion',
+      'Marketing Digital': 'team.departments.marketing_digital',
+      'Desarrollo': 'team.departments.desarrollo_simple',
+      'Seguretat Informàtica': 'team.departments.seguridad'
+    };
+    return t(departmentMap[department] || department);
+  };
 
   return (
     <WhiteToBlueGradient>
@@ -64,11 +93,11 @@ const TeamSection: React.FC<TeamSectionProps> = () => {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-light text-slate-900 mb-6">
-              {TEAM_CONSTANTS.TITLE.MAIN}{' '}
-              <span className="text-blue-400 font-medium">{TEAM_CONSTANTS.TITLE.HIGHLIGHT}</span>
+              {t('team.title.main')}{' '}
+              <span className="text-blue-400 font-medium">{t('team.title.highlight')}</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              {TEAM_CONSTANTS.SUBTITLE}
+              {t('team.subtitle')}
             </p>
           </motion.div>
 
