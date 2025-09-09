@@ -42,11 +42,15 @@ export const DIRECT_CONTACT_INFO: DirectContact[] = [
 ];
 
 export const SERVICES_OPTIONS = [
-  'Desarrollo Web',
-  'Aplicaciones Móviles',
-  'Cloud Computing',
-  'Ciberseguridad',
+  'Desarrollo de Apps y Webs',
   'Marketing Digital',
-  'Consultoría IT',
+  'Servidores Cloud',
+  'Ciberseguridad',
+  'Centralitas VoIP/SIP',
+  'Operador de Internet',
+  'Cartelería Digital',
+  'Pantallas Interactivas',
+  'Producción Audiovisual',
+  'Partner Microsoft 365',
   'Otro'
 ];
