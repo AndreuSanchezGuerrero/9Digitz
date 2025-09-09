@@ -18,7 +18,7 @@ export const CTA_CONSTANTS = {
     MAIN_CTA: 'Solicitar consulta gratuita'
   },
   CONTACT: {
-    PHONE: '+34 900 123 456',
+    PHONE: '+34 937 374 400',
     READY_TITLE: '¿Listo para empezar?',
     READY_SUBTITLE: 'Contacta con nosotros hoy mismo'
   },

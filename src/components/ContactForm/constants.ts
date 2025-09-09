@@ -19,7 +19,7 @@ export const CONTACT_CONSTANTS = {
   PLACEHOLDERS: {
     NAME: 'Tu nombre completo',
     EMAIL: 'tu@email.com',
-    PHONE: '+34 600 000 000',
+    PHONE: '+34 937 374 400',
     SERVICE: 'Selecciona un servicio',
     MESSAGE: 'Cuéntanos sobre tu proyecto...'
   },
@@ -36,7 +36,7 @@ export const WHY_CHOOSE_US: ContactInfo[] = [
 ];
 
 export const DIRECT_CONTACT_INFO: DirectContact[] = [
-  { icon: Phone, text: '+34 900 123 456' },
+  { icon: Phone, text: '+34 937 374 400' },
   { icon: Mail, text: 'info@9digitz.com' },
   { icon: MessageSquare, text: 'Chat en vivo disponible' }
 ];
