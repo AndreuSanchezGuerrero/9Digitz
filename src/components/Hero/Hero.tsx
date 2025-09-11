@@ -45,7 +45,7 @@ const Hero: React.FC<HeroProps> = () => {
           className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 md:mb-6 leading-tight"
         >
           {t('hero.title.main')}{' '}
-          <span className="text-blue-400 font-medium">{t('hero.title.highlight')}</span>{' '}
+          <span className="text-white font-medium">{t('hero.title.highlight')}</span>{' '}
           {t('hero.title.suffix')}
         </motion.h1>
 
@@ -53,7 +53,7 @@ const Hero: React.FC<HeroProps> = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
-          className="text-lg md:text-xl lg:text-2xl text-slate-300 mb-6 md:mb-8 max-w-3xl mx-auto font-light leading-relaxed"
+          className="text-lg md:text-xl lg:text-2xl text-white mb-6 md:mb-8 max-w-3xl mx-auto font-light leading-relaxed"
         >
           {t('hero.subtitle')}
         </motion.p>

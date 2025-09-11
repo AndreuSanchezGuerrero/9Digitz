@@ -98,9 +98,9 @@ const ProcessJourney: React.FC<ProcessJourneyProps> = () => {
               <Lightbulb className="text-blue-400" size={32} />
               <h3 className="text-2xl font-semibold text-white">
                 {t('process.cta.title')}
-              </h3>
+              <span className="text-white font-medium">{t('process.title.highlight')}</span>
             </div>
-            <p className="text-slate-400 mb-6">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               {t('process.cta.description')}
             </p>
             <motion.button

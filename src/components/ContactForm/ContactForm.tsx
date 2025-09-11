@@ -100,9 +100,9 @@ const ContactForm: React.FC<ContactFormProps> = () => {
         >
           <h2 className="text-5xl md:text-6xl font-light text-white mb-6">
             {t('contact.title.main')}{' '}
-            <span className="text-blue-400 font-medium">{t('contact.title.highlight')}</span>
+            <span className="text-white font-medium">{t('contact.title.highlight')}</span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             {t('contact.subtitle')}
           </p>
         </motion.div>

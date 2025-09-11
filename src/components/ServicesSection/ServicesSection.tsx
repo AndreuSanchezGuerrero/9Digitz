@@ -34,9 +34,9 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
           >
             <h2 className="text-5xl md:text-6xl font-light text-white mb-6">
               {t('services.title.main')}{' '}
-              <span className="text-blue-400 font-medium">{t('services.title.highlight')}</span>
+              <span className="text-white font-medium">{t('services.title.highlight')}</span>
             </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               {t('services.subtitle')}
             </p>
           </motion.div>
