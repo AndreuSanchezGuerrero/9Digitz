@@ -73,7 +73,7 @@ const LanguageSelector: React.FC = () => {
                   )}
                 </motion.button>
               ))}
-            </div>
+            </motion.div>
           </>
         )}
       </AnimatePresence>
