@@ -25,13 +25,13 @@ const LanguageSelector: React.FC = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 bg-slate-800 text-white px-3 py-2 rounded-lg hover:bg-slate-700 transition-all duration-300 shadow-lg"
+        className="flex items-center space-x-1.5 px-3 py-2 rounded-lg hover:bg-slate-100 transition-all duration-300"
       >
-        <Globe size={16} className="text-white" />
-        <span className="text-sm font-medium">{currentLanguage?.shortCode}</span>
+        <Globe size={16} style={{ color: '#0477E2' }} />
+        <span className="text-sm font-medium hidden md:block text-black">{currentLanguage?.shortCode}</span>
         <ChevronDown 
           size={14} 
-          className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          className={`transition-transform duration-200 text-black ${isOpen ? 'rotate-180' : ''}`}
         />
       </motion.button>
 
