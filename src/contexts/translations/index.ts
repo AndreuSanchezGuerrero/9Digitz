@@ -1,2 +1,2 @@
-export { spanishTranslations } from './spanish';
-export { catalanTranslations } from './catalan';
+export { spanishTranslations } from './es';
+export { catalanTranslations } from './ca';
